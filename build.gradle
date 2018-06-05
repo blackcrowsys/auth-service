@@ -27,6 +27,7 @@ sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+    maven { url 'https://jitpack.io' }
 }
 
 dependencyManagement {
@@ -36,10 +37,11 @@ dependencyManagement {
 }
 
 dependencies {
-    compile 'org.springframework.boot:spring-boot-starter'
-    compile 'org.springframework.cloud:spring-cloud-starter-eureka'
-    compile 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
-    compile('com.hazelcast:hazelcast:3.10.1')
-    compileOnly('org.projectlombok:lombok')
-    testCompile('org.springframework.boot:spring-boot-starter-test')
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.cloud:spring-cloud-starter-eureka'
+    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+    implementation('com.hazelcast:hazelcast:3.10.1')
+    implementation('org.projectlombok:lombok')
+    implementation 'com.github.blackcrowsys:common-utils:-SNAPSHOT'
+    testImplementation('org.springframework.boot:spring-boot-starter-test')
 }
