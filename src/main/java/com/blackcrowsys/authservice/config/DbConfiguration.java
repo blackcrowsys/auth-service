@@ -24,7 +24,6 @@ public class DbConfiguration {
 
     @Bean
     public Migration migration() {
-        Migration migration = new FlywayMigrator(flyway());
-        return migration;
+        return new FlywayMigrator(flyway());
     }
 }

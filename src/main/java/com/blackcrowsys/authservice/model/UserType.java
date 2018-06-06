@@ -16,7 +16,7 @@ public enum UserType {
         return this.type;
     }
 
-    public UserType getUserType(String code) {
+    public static UserType getUserType(String code) {
         return Stream.of(UserType.values())
                 .filter(s -> s.type.equalsIgnoreCase(code))
                 .findFirst()

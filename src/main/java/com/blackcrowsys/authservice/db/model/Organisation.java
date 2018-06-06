@@ -11,7 +11,7 @@ import java.util.List;
 @Data
 public class Organisation extends AbstractUUIDEntity {
 
-    private static final long serialVersionUID = 5730701913088337728L;
+    private static final long serialVersionUID = 3603406359133335840L;
 
     @Column(name = "NAME")
     private String name;

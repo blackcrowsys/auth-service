@@ -9,6 +9,8 @@ import javax.persistence.*;
 @Data
 public class Login extends AbstractUUIDEntity {
 
+    private static final long serialVersionUID = 1780342589613763500L;
+
     @Column(name = "USERNAME")
     private String username;
 
@@ -35,6 +37,10 @@ public class Login extends AbstractUUIDEntity {
 
     @Column(name = "EMAIL")
     private String email;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "TYPE")
+    private UserType userType;
 
     @ManyToOne
     @JoinColumn(name = "ORGANISATION_ID")
