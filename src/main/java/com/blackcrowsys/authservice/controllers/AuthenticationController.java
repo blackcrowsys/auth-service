@@ -20,6 +20,7 @@ import javax.validation.Valid;
 public class AuthenticationController {
 
     private static final String AUTH_HEADER = "Authorization";
+    private static final String BEARER = "Bearer";
     private static final String TYPE_HEADER = "Type";
 
     @Autowired
@@ -28,7 +29,7 @@ public class AuthenticationController {
     @RequestMapping(value = "/authenticate", method = RequestMethod.POST)
     public ResponseEntity<BcsUserPrincipal> authenticate(@Valid @RequestBody UserForm user, HttpServletResponse response) {
         BcsUserPrincipal principal = service.authenticate(user.getUsername(), user.getPassword());
-        response.setHeader(AUTH_HEADER, principal.getJwtToken());
+        response.setHeader(AUTH_HEADER, String.format("%s %s", BEARER, principal.getJwtToken()));
         response.setHeader(TYPE_HEADER, principal.getType().getType());
         return new ResponseEntity<>(principal, HttpStatus.OK);
     }

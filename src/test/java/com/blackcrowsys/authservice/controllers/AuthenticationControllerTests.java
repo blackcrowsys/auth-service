@@ -66,7 +66,7 @@ public class AuthenticationControllerTests {
                 .contentType(MediaType.APPLICATION_JSON_UTF8)
                 .content(JacksonConverter.convertToJsonBytes(mapper, form)))
                 .andExpect(status().isOk())
-                .andExpect(header().string("Authorization", principal.getJwtToken()))
+                .andExpect(header().string("Authorization", "Bearer " + principal.getJwtToken()))
                 .andExpect(header().string("Type", "Room"));
 
         verify(service).authenticate(USER, AUTH);
