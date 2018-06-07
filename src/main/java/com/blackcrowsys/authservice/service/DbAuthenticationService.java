@@ -2,9 +2,9 @@ package com.blackcrowsys.authservice.service;
 
 import com.blackcrowsys.authservice.db.model.Login;
 import com.blackcrowsys.authservice.db.repository.LoginRepository;
-import com.blackcrowsys.authservice.exceptions.UnauthorisedException;
 import com.blackcrowsys.authservice.model.BcsUserPrincipal;
 import com.blackcrowsys.authservice.model.UserType;
+import com.blackcrowsys.commonutils.exceptions.UnauthorisedException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

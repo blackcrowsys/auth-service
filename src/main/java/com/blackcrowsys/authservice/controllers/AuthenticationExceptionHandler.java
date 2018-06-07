@@ -1,6 +1,6 @@
 package com.blackcrowsys.authservice.controllers;
 
-import com.blackcrowsys.authservice.exceptions.UnauthorisedException;
+import com.blackcrowsys.commonutils.exceptions.UnauthorisedException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

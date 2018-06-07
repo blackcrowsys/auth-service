@@ -1,10 +1,10 @@
 package com.blackcrowsys.authservice.controllers;
 
-import com.blackcrowsys.authservice.exceptions.UnauthorisedException;
 import com.blackcrowsys.authservice.model.BcsUserPrincipal;
 import com.blackcrowsys.authservice.model.UserForm;
 import com.blackcrowsys.authservice.model.UserType;
 import com.blackcrowsys.authservice.service.AuthenticationService;
+import com.blackcrowsys.commonutils.exceptions.UnauthorisedException;
 import com.blackcrowsys.commonutils.json.JacksonConverter;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Before;
